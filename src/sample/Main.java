@@ -2,6 +2,7 @@ package sample;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.GridPane;
@@ -59,7 +60,7 @@ public class Main extends Application {
         Label section9Label = new Label("SECTION 9. TIRE AND WHEEL");
         Label frontTreadDepthLabel  = new Label("Front Tread Depth");
         Label rearTreadDepthLabel  = new Label("Rear Tread Depth");
-        Label tirePressureLabel = new Label("Tire Pressure(PSI) - ONly req'd if adjusted by more than 5 PSI");
+        Label tirePressureLabel = new Label("Tire Pressure(PSI) - Only req'd if adjusted by more than 5 PSI");
         Label frontLeftLabel  = new Label("Front Left");
         Label frontRightLabel  = new Label("Front Right");
         Label rearLeftLabel = new Label("Rear left");
@@ -86,77 +87,81 @@ public class Main extends Application {
         gPane.add(suggestedPerformanceLabel, 5,1);
         gPane.add(commentsLabel, 6,1);
 
-        gPane.add(inspectionResultLabel, 0, 2);
+        gPane.add(inspectionResultLabel, 0, 2, 1, 2);
+        CheckBox test1 = new CheckBox("Fail");
+        CheckBox test2 = new CheckBox("Pass");
+        gPane.add(test1, 1, 2);
+        gPane.add(test2, 1, 3);
 
-        gPane.add(section1Label, 0, 3);
+        gPane.add(section1Label, 0, 4);
 
-        gPane.add(section2Label, 0, 4);
+        gPane.add(section2Label, 0, 5);
 
-        gPane.add(section3Label, 0, 5);
+        gPane.add(section3Label, 0, 6);
 
-        gPane.add(leftFrontPadsLabel, 0, 6);
+        gPane.add(leftFrontPadsLabel, 0, 7);
 
-        gPane.add(rightFrontPadsLabel, 0, 7);
+        gPane.add(rightFrontPadsLabel, 0, 8);
 
-        gPane.add(leftRearPadsLabel, 0, 8);
+        gPane.add(leftRearPadsLabel, 0, 9);
 
-        gPane.add(rightRearPadsLabel, 0 , 9);
+        gPane.add(rightRearPadsLabel, 0 , 10);
 
-        gPane.add(frontRotorsDrumsLabel, 0 , 10);
+        gPane.add(frontRotorsDrumsLabel, 0 , 11);
 
-        gPane.add(rearRotorsDrumsLabel, 0 ,11);
+        gPane.add(rearRotorsDrumsLabel, 0 ,12);
 
-        gPane.add(frontBrakeShoesLabel, 0 ,12);
+        gPane.add(frontBrakeShoesLabel, 0 ,13);
 
-        gPane.add(rearBrakeShoesLabel, 0 ,13);
+        gPane.add(rearBrakeShoesLabel, 0 ,14);
 
-        gPane.add(section4Label, 0, 14);
+        gPane.add(section4Label, 0, 15);
 
-        gPane.add(section5Label, 0 , 15);
+        gPane.add(section5Label, 0 , 16, 2, 1);
 
-        gPane.add(section6label, 0 , 16);
+        gPane.add(section6label, 0 , 17);
 
-        gPane.add(section7Label, 0 , 17);
+        gPane.add(section7Label, 0 , 18,2, 1);
 
-        gPane.add(section8Label, 0 , 18);
+        gPane.add(section8Label, 0 , 19);
 
-        gPane.add(windowTintLabel, 0 ,19);
+        gPane.add(windowTintLabel, 0 ,20);
 
-        gPane.add(section9Label, 0 , 20);
+        gPane.add(section9Label, 0 , 21, 2 ,1);
 
-        gPane.add(frontTreadDepthLabel, 0 ,21);
+        gPane.add(frontTreadDepthLabel, 0 ,22);
 
-        gPane.add(rearTreadDepthLabel, 0 ,22);
+        gPane.add(rearTreadDepthLabel, 0 ,23);
 
-        gPane.add(tirePressureLabel, 0 ,23);
+        gPane.add(tirePressureLabel, 0 ,24, 2, 1);
 
-        gPane.add(frontLeftLabel, 0 ,24);
+        gPane.add(frontLeftLabel, 0 ,25);
 
-        gPane.add(frontRightLabel, 0, 25);
+        gPane.add(frontRightLabel, 0, 26);
 
-        gPane.add(rearLeftLabel, 0 , 26);
+        gPane.add(rearLeftLabel, 0 , 27);
 
-        gPane.add(rearRightLabel, 0 , 27);
+        gPane.add(rearRightLabel, 0 , 28);
 
-        gPane.add(section10Label, 0 , 28);
+        gPane.add(section10Label, 0 , 29, 2, 1);
 
-        gPane.add(section11Label, 0 , 29);
+        gPane.add(section11Label, 0 , 30);
 
-        gPane.add(warningLightsLabel, 0 , 30);
+        gPane.add(warningLightsLabel, 0 , 31);
 
-        gPane.add(ABSLabel, 0, 31);
+        gPane.add(ABSLabel, 0, 32);
 
-        gPane.add(TPMSLabel, 0, 32);
+        gPane.add(TPMSLabel, 0, 33);
 
-        gPane.add(checkEngineLabel, 0 , 33);
+        gPane.add(checkEngineLabel, 0 , 34);
 
-        gPane.add(airBagsLabel, 0 , 34);
+        gPane.add(airBagsLabel, 0 , 35);
 
-        gPane.add(electronicStabilityControlLabel, 0 , 35);
+        gPane.add(electronicStabilityControlLabel, 0 , 36);
 
-        gPane.add(otherLightsLabel, 0 , 36);
+        gPane.add(otherLightsLabel, 0 , 37);
 
-        gPane.add(fuelLevelLabel, 0 , 37);
+        gPane.add(fuelLevelLabel, 0 , 38);
 
         // Create the scene, and show the window
         Scene scene = new Scene(sPane, 1024, 768);
