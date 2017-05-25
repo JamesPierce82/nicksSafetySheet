@@ -1,10 +1,12 @@
 package program;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.geometry.HPos;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -18,6 +20,21 @@ public class Main extends Application {
 
         gPane.setHgap(15);
         gPane.setVgap(10);
+
+        // Sets the alignment of each column
+        ColumnConstraints column0 = new ColumnConstraints();
+        column0.setHalignment(HPos.LEFT);
+        ColumnConstraints column1 = new ColumnConstraints();
+        column1.setHalignment(HPos.CENTER);
+        ColumnConstraints column2 = new ColumnConstraints();
+        column2.setHalignment(HPos.CENTER);
+        ColumnConstraints column3 = new ColumnConstraints();
+        column3.setHalignment(HPos.CENTER);
+        ColumnConstraints column4 = new ColumnConstraints();
+        column4.setHalignment(HPos.CENTER);
+        ColumnConstraints column5 = new ColumnConstraints();
+        column5.setHalignment(HPos.CENTER);
+        gPane.getColumnConstraints().addAll(column0, column1, column2, column3, column4, column5);
 
         // Show the gridlines (this also shows gridlines around the hgap and vgap segments
 //        gPane.setGridLinesVisible(true);
@@ -76,6 +93,42 @@ public class Main extends Application {
         Label otherLightsLabel = new Label("Other Lights");
         Label fuelLevelLabel = new Label("Fuel Level");
 
+        // Add other features such as checkboxes and comment boxes
+        ChoiceBox inspectionResultChoiceBox = new ChoiceBox(FXCollections.observableArrayList("Fail", "Pass"));
+
+        ToggleGroup section1TGroup = new ToggleGroup();
+        RadioButton section1okRB = new RadioButton();
+        RadioButton section1rrRB = new RadioButton();
+        RadioButton section1sprRB = new RadioButton();
+        RadioButton section1speRB = new RadioButton();
+
+        section1okRB.setToggleGroup(section1TGroup);
+        section1rrRB.setToggleGroup(section1TGroup);
+        section1sprRB.setToggleGroup(section1TGroup);
+        section1speRB.setToggleGroup(section1TGroup);
+
+        ToggleGroup section2TGroup = new ToggleGroup();
+        RadioButton section2okRB = new RadioButton();
+        RadioButton section2rrRB = new RadioButton();
+        RadioButton section2sprRB = new RadioButton();
+        RadioButton section2speRB = new RadioButton();
+
+        section2okRB.setToggleGroup(section2TGroup);
+        section2rrRB.setToggleGroup(section2TGroup);
+        section2sprRB.setToggleGroup(section2TGroup);
+        section2speRB.setToggleGroup(section2TGroup);
+
+        ToggleGroup section3TGroup = new ToggleGroup();
+        RadioButton section3okRB = new RadioButton();
+        RadioButton section3rrRB = new RadioButton();
+        RadioButton section3sprRB = new RadioButton();
+        RadioButton section3speRB = new RadioButton();
+
+        section3okRB.setToggleGroup(section3TGroup);
+        section3rrRB.setToggleGroup(section3TGroup);
+        section3sprRB.setToggleGroup(section3TGroup);
+        section3speRB.setToggleGroup(section3TGroup);
+
         // Add children to the GridPane.
         gPane.add(OSILabel,0, 0 , 3, 1);
         gPane.add(autoClinicLabel, 3, 0, 3, 1);
@@ -87,81 +140,86 @@ public class Main extends Application {
         gPane.add(suggestedPerformanceLabel, 5,1);
         gPane.add(commentsLabel, 6,1);
 
-        gPane.add(inspectionResultLabel, 0, 2, 1, 2);
-        CheckBox test1 = new CheckBox("Fail");
-        CheckBox test2 = new CheckBox("Pass");
-        gPane.add(test1, 1, 2);
-        gPane.add(test2, 1, 3);
+        gPane.add(inspectionResultLabel, 0, 2);
+        gPane.add(inspectionResultChoiceBox, 1, 2);
 
-        gPane.add(section1Label, 0, 4);
+        gPane.add(section1Label, 0, 3);
+        gPane.add(section1okRB, 2, 3);
+        gPane.add(section1rrRB, 3, 3);
+        gPane.add(section1sprRB, 4, 3);
+        gPane.add(section1speRB, 5, 3);
 
-        gPane.add(section2Label, 0, 5);
+        gPane.add(section2Label, 0, 4);
+        gPane.add(section2okRB, 2, 4);
+        gPane.add(section2rrRB, 3, 4);
+        gPane.add(section2sprRB, 4, 4);
+        gPane.add(section2speRB, 5, 4);
 
-        gPane.add(section3Label, 0, 6);
+        gPane.add(section3Label, 0, 5);
 
-        gPane.add(leftFrontPadsLabel, 0, 7);
+        gPane.add(leftFrontPadsLabel, 0, 6);
 
-        gPane.add(rightFrontPadsLabel, 0, 8);
+        gPane.add(rightFrontPadsLabel, 0, 7);
 
-        gPane.add(leftRearPadsLabel, 0, 9);
+        gPane.add(leftRearPadsLabel, 0, 8);
 
-        gPane.add(rightRearPadsLabel, 0 , 10);
+        gPane.add(rightRearPadsLabel, 0 , 9);
 
-        gPane.add(frontRotorsDrumsLabel, 0 , 11);
+        gPane.add(frontRotorsDrumsLabel, 0 , 10);
 
-        gPane.add(rearRotorsDrumsLabel, 0 ,12);
+        gPane.add(rearRotorsDrumsLabel, 0 ,11);
 
-        gPane.add(frontBrakeShoesLabel, 0 ,13);
+        gPane.add(frontBrakeShoesLabel, 0 ,12);
 
-        gPane.add(rearBrakeShoesLabel, 0 ,14);
+        gPane.add(rearBrakeShoesLabel, 0 ,13);
 
-        gPane.add(section4Label, 0, 15);
+        gPane.add(section4Label, 0, 14);
 
-        gPane.add(section5Label, 0 , 16, 2, 1);
+        gPane.add(section5Label, 0 , 15, 2, 1);
 
-        gPane.add(section6label, 0 , 17);
+        gPane.add(section6label, 0 , 16);
 
-        gPane.add(section7Label, 0 , 18,2, 1);
+        gPane.add(section7Label, 0 , 17,2, 1);
 
-        gPane.add(section8Label, 0 , 19);
+        gPane.add(section8Label, 0 , 18);
 
-        gPane.add(windowTintLabel, 0 ,20);
+        gPane.add(windowTintLabel, 0 ,19);
 
-        gPane.add(section9Label, 0 , 21, 2 ,1);
+        gPane.add(section9Label, 0 , 20, 2 ,1);
 
-        gPane.add(frontTreadDepthLabel, 0 ,22);
+        gPane.add(frontTreadDepthLabel, 0 ,21);
 
-        gPane.add(rearTreadDepthLabel, 0 ,23);
+        gPane.add(rearTreadDepthLabel, 0 ,22);
 
-        gPane.add(tirePressureLabel, 0 ,24, 2, 1);
+        gPane.add(tirePressureLabel, 0 ,23, 2, 1);
 
-        gPane.add(frontLeftLabel, 0 ,25);
+        gPane.add(frontLeftLabel, 0 ,24);
 
-        gPane.add(frontRightLabel, 0, 26);
+        gPane.add(frontRightLabel, 0, 25);
 
-        gPane.add(rearLeftLabel, 0 , 27);
+        gPane.add(rearLeftLabel, 0 , 26);
 
-        gPane.add(rearRightLabel, 0 , 28);
+        gPane.add(rearRightLabel, 0 , 27);
 
-        gPane.add(section10Label, 0 , 29, 2, 1);
+        gPane.add(section10Label, 0 , 28, 2, 1);
 
-        gPane.add(section11Label, 0 , 30);
+        gPane.add(section11Label, 0 , 29);
 
-        gPane.add(warningLightsLabel, 0 , 31);
+        gPane.add(warningLightsLabel, 0 , 30);
 
-        gPane.add(ABSLabel, 0, 32);
+        gPane.add(ABSLabel, 0, 31);
 
-        gPane.add(TPMSLabel, 0, 33);
+        gPane.add(TPMSLabel, 0, 32);
 
-        gPane.add(checkEngineLabel, 0 , 34);
+        gPane.add(checkEngineLabel, 0 , 33);
 
-        gPane.add(airBagsLabel, 0 , 35);
+        gPane.add(airBagsLabel, 0 , 34);
 
-        gPane.add(electronicStabilityControlLabel, 0 , 36);
+        gPane.add(electronicStabilityControlLabel, 0 , 35);
 
-        gPane.add(otherLightsLabel, 0 , 37);
+        gPane.add(otherLightsLabel, 0 , 38);
 
-        gPane.add(fuelLevelLabel, 0 , 38);
+        gPane.add(fuelLevelLabel, 0 , 39);
 
         // Create the scene, and show the window
         Scene scene = new Scene(sPane, 1024, 768);
