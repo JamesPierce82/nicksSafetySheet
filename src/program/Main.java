@@ -129,6 +129,314 @@ public class Main extends Application {
         section3sprRB.setToggleGroup(section3TGroup);
         section3speRB.setToggleGroup(section3TGroup);
 
+        ToggleGroup leftFrontPadsTGroup = new ToggleGroup();
+        RadioButton leftFrontPadsokRB = new RadioButton();
+        RadioButton leftFrontPadsrrRB = new RadioButton();
+        RadioButton leftFrontPadssprRB = new RadioButton();
+        RadioButton leftFrontPadsspeRB = new RadioButton();
+
+        leftFrontPadsokRB.setToggleGroup(leftFrontPadsTGroup);
+        leftFrontPadsrrRB.setToggleGroup(leftFrontPadsTGroup);
+        leftFrontPadssprRB.setToggleGroup(leftFrontPadsTGroup);
+        leftFrontPadsspeRB.setToggleGroup(leftFrontPadsTGroup);
+
+        ToggleGroup rightFrontPadsTGroup = new ToggleGroup();
+        RadioButton rightFrontPadsokRB = new RadioButton();
+        RadioButton rightFrontPadsrrRB = new RadioButton();
+        RadioButton rightFrontPadssprRB = new RadioButton();
+        RadioButton rightFrontPadsspeRB = new RadioButton();
+
+        rightFrontPadsokRB.setToggleGroup(rightFrontPadsTGroup);
+        rightFrontPadsrrRB.setToggleGroup(rightFrontPadsTGroup);
+        rightFrontPadssprRB.setToggleGroup(rightFrontPadsTGroup);
+        rightFrontPadsspeRB.setToggleGroup(rightFrontPadsTGroup);
+
+        ToggleGroup leftRearPadsTGroup = new ToggleGroup();
+        RadioButton leftRearPadsokRB = new RadioButton();
+        RadioButton leftRearPadsrrRB = new RadioButton();
+        RadioButton leftRearPadssprRB = new RadioButton();
+        RadioButton leftRearPadsspeRB = new RadioButton();
+
+        leftRearPadsokRB.setToggleGroup(leftRearPadsTGroup);
+        leftRearPadsrrRB.setToggleGroup(leftRearPadsTGroup);
+        leftRearPadssprRB.setToggleGroup(leftRearPadsTGroup);
+        leftRearPadsspeRB.setToggleGroup(leftRearPadsTGroup);
+
+        ToggleGroup rightRearPadsTGroup = new ToggleGroup();
+        RadioButton rightRearPadsokRB = new RadioButton();
+        RadioButton rightRearPadsrrRB = new RadioButton();
+        RadioButton rightRearPadssprRB = new RadioButton();
+        RadioButton rightRearPadsspeRB = new RadioButton();
+
+        rightRearPadsokRB.setToggleGroup(rightRearPadsTGroup);
+        rightRearPadsrrRB.setToggleGroup(rightRearPadsTGroup);
+        rightRearPadssprRB.setToggleGroup(rightRearPadsTGroup);
+        rightRearPadsspeRB.setToggleGroup(rightRearPadsTGroup);
+
+        ToggleGroup frontRotorsDrumsTGroup = new ToggleGroup();
+        RadioButton frontRotorsDrumsokRB = new RadioButton();
+        RadioButton frontRotorsDrumsrrRB = new RadioButton();
+        RadioButton frontRotorsDrumssprRB = new RadioButton();
+        RadioButton frontRotorsDrumsspeRB = new RadioButton();
+
+        frontRotorsDrumsokRB.setToggleGroup(frontRotorsDrumsTGroup);
+        frontRotorsDrumsrrRB.setToggleGroup(frontRotorsDrumsTGroup);
+        frontRotorsDrumssprRB.setToggleGroup(frontRotorsDrumsTGroup);
+        frontRotorsDrumsspeRB.setToggleGroup(frontRotorsDrumsTGroup);
+
+        ToggleGroup rearRotorsDrumsTGroup = new ToggleGroup();
+        RadioButton rearRotorsDrumsokRB = new RadioButton();
+        RadioButton rearRotorsDrumsrrRB = new RadioButton();
+        RadioButton rearRotorsDrumssprRB = new RadioButton();
+        RadioButton rearRotorsDrumsspeRB = new RadioButton();
+
+        rearRotorsDrumsokRB.setToggleGroup(rearRotorsDrumsTGroup);
+        rearRotorsDrumsrrRB.setToggleGroup(rearRotorsDrumsTGroup);
+        rearRotorsDrumssprRB.setToggleGroup(rearRotorsDrumsTGroup);
+        rearRotorsDrumsspeRB.setToggleGroup(rearRotorsDrumsTGroup);
+
+        ToggleGroup frontBrakeShoesTGroup = new ToggleGroup();
+        RadioButton frontBrakeShoesokRB = new RadioButton();
+        RadioButton frontBrakeShoesrrRB = new RadioButton();
+        RadioButton frontBrakeShoessprRB = new RadioButton();
+        RadioButton frontBrakeShoesspeRB = new RadioButton();
+
+        frontBrakeShoesokRB.setToggleGroup(frontBrakeShoesTGroup);
+        frontBrakeShoesrrRB.setToggleGroup(frontBrakeShoesTGroup);
+        frontBrakeShoessprRB.setToggleGroup(frontBrakeShoesTGroup);
+        frontBrakeShoesspeRB.setToggleGroup(frontBrakeShoesTGroup);
+
+        ToggleGroup rearBrakeShoesTGroup = new ToggleGroup();
+        RadioButton rearBrakeShoesokRB = new RadioButton();
+        RadioButton rearBrakeShoesrrRB = new RadioButton();
+        RadioButton rearBrakeShoessprRB = new RadioButton();
+        RadioButton rearBrakeShoesspeRB = new RadioButton();
+
+        rearBrakeShoesokRB.setToggleGroup(rearBrakeShoesTGroup);
+        rearBrakeShoesrrRB.setToggleGroup(rearBrakeShoesTGroup);
+        rearBrakeShoessprRB.setToggleGroup(rearBrakeShoesTGroup);
+        rearBrakeShoesspeRB.setToggleGroup(rearBrakeShoesTGroup);
+
+        ToggleGroup section4TGroup = new ToggleGroup();
+        RadioButton section4okRB = new RadioButton();
+        RadioButton section4rrRB = new RadioButton();
+        RadioButton section4sprRB = new RadioButton();
+        RadioButton section4speRB = new RadioButton();
+
+        section4okRB.setToggleGroup(section4TGroup);
+        section4rrRB.setToggleGroup(section4TGroup);
+        section4sprRB.setToggleGroup(section4TGroup);
+        section4speRB.setToggleGroup(section4TGroup);
+
+        ToggleGroup section5TGroup = new ToggleGroup();
+        RadioButton section5okRB = new RadioButton();
+        RadioButton section5rrRB = new RadioButton();
+        RadioButton section5sprRB = new RadioButton();
+        RadioButton section5speRB = new RadioButton();
+
+        section5okRB.setToggleGroup(section5TGroup);
+        section5rrRB.setToggleGroup(section5TGroup);
+        section5sprRB.setToggleGroup(section5TGroup);
+        section5speRB.setToggleGroup(section5TGroup);
+
+        ToggleGroup section6TGroup = new ToggleGroup();
+        RadioButton section6okRB = new RadioButton();
+        RadioButton section6rrRB = new RadioButton();
+        RadioButton section6sprRB = new RadioButton();
+        RadioButton section6speRB = new RadioButton();
+
+        section6okRB.setToggleGroup(section6TGroup);
+        section6rrRB.setToggleGroup(section6TGroup);
+        section6sprRB.setToggleGroup(section6TGroup);
+        section6speRB.setToggleGroup(section6TGroup);
+
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+//
+//        ToggleGroup TGroup = new ToggleGroup();
+//        RadioButton okRB = new RadioButton();
+//        RadioButton rrRB = new RadioButton();
+//        RadioButton sprRB = new RadioButton();
+//        RadioButton speRB = new RadioButton();
+//
+//        okRB.setToggleGroup(TGroup);
+//        rrRB.setToggleGroup(TGroup);
+//        sprRB.setToggleGroup(TGroup);
+//        speRB.setToggleGroup(TGroup);
+
         // Add children to the GridPane.
         gPane.add(OSILabel,0, 0 , 3, 1);
         gPane.add(autoClinicLabel, 3, 0, 3, 1);
@@ -149,11 +457,15 @@ public class Main extends Application {
         gPane.add(section1sprRB, 4, 3);
         gPane.add(section1speRB, 5, 3);
 
-        gPane.add(section2Label, 0, 4);
-        gPane.add(section2okRB, 2, 4);
-        gPane.add(section2rrRB, 3, 4);
-        gPane.add(section2sprRB, 4, 4);
-        gPane.add(section2speRB, 5, 4);
+
+        // *** THIS IS THE BETTER WAY THAN ONE LINE AT A TIME
+        // TODO
+        gPane.addRow(4, section2Label, new Label(), section2okRB, section2rrRB, section2sprRB, section2speRB);
+//        gPane.add(section2Label, 0, 4);
+//        gPane.add(section2okRB, 2, 4);
+//        gPane.add(section2rrRB, 3, 4);
+//        gPane.add(section2sprRB, 4, 4);
+//        gPane.add(section2speRB, 5, 4);
 
         gPane.add(section3Label, 0, 5);
 
