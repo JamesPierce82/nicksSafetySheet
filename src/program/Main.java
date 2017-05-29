@@ -5,7 +5,6 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.ColumnConstraints;
@@ -179,10 +178,6 @@ public class Main extends Application {
         RadioButton[] RBrearTreadDepthArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
         for(int i = 0; i < 4; i++){RBrearTreadDepthArray[i].setToggleGroup(rearTreadDepthTGroup);}
 
-        ToggleGroup tirePressureTGroup = new ToggleGroup();
-        RadioButton[] RBtirePressureArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBtirePressureArray[i].setToggleGroup(tirePressureTGroup);}
-
         ToggleGroup section10TGroup = new ToggleGroup();
         RadioButton[] RBsection10Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
         for(int i = 0; i < 4; i++){RBsection10Array[i].setToggleGroup(section10TGroup);}
@@ -191,25 +186,17 @@ public class Main extends Application {
         RadioButton[] RBsection11Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
         for(int i = 0; i < 4; i++){RBsection11Array[i].setToggleGroup(section11TGroup);}
 
+
+        TextField s1Text = new TextField();
         // Add children to the GridPane.
         gPane.add(OSILabel,0, 0 , 3, 1);
         gPane.add(autoClinicLabel, 3, 0, 3, 1);
 
-        gPane.add(legendLabel, 0,1);
-        gPane.add(okLabel, 2,1);
-        gPane.add(repairRequiredLabel, 3,1);
-        gPane.add(suggestedPreventiveLabel, 4,1);
-        gPane.add(suggestedPerformanceLabel, 5,1);
-        gPane.add(commentsLabel, 6,1);
+        gPane.addRow(1, legendLabel, new Text(), okLabel, repairRequiredLabel, suggestedPreventiveLabel, suggestedPerformanceLabel, commentsLabel);
 
-        gPane.add(inspectionResultLabel, 0, 2);
-        gPane.add(inspectionResultChoiceBox, 1, 2);
+        gPane.addRow(2, inspectionResultLabel, inspectionResultChoiceBox);
 
-
-
-        // *** THIS IS THE BETTER WAY THAN ONE LINE AT A TIME
-        // TODO
-        gPane.addRow(3, section1Label, new Text(), RBsection1Array[0], RBsection1Array[1], RBsection1Array[2], RBsection1Array[3]);
+        gPane.addRow(3, section1Label, new Text(), RBsection1Array[0], RBsection1Array[1], RBsection1Array[2], RBsection1Array[3], s1Text);
 
         gPane.addRow(4, section2Label, new Text(), RBsection2Array[0], RBsection2Array[1], RBsection2Array[2], RBsection2Array[3]);
 
@@ -233,51 +220,55 @@ public class Main extends Application {
 
         gPane.addRow(14, section4Label, new Text(), RBsection4Array[0], RBsection4Array[1], RBsection4Array[2], RBsection4Array[3]);
 
-        gPane.addRow(section5Label, 0 , 15, 2, 1);
+        gPane.add(section5Label, 0 , 15, 2, 1);
+        gPane.addRow(15, RBsection5Array[0], RBsection5Array[1], RBsection5Array[2], RBsection5Array[3]);
 
-        gPane.addRow(section6label, 0 , 16);
+        gPane.addRow(16, section6label, new Text(), RBsection6Array[0], RBsection6Array[1], RBsection6Array[2], RBsection6Array[3]);
 
-        gPane.addRow(section7Label, 0 , 17,2, 1);
+        gPane.add(section7Label, 0 , 17,2, 1);
+        gPane.addRow(17, RBsection7Array[0], RBsection7Array[1], RBsection7Array[2], RBsection7Array[3]);
 
-        gPane.addRow(section8Label, 0 , 18);
+        gPane.addRow(18, section8Label, new Text(), RBsection8Array[0], RBsection8Array[1], RBsection8Array[2], RBsection8Array[3]);
 
-        gPane.addRow(windowTintLabel, 0 ,19);
+        gPane.addRow(19,windowTintLabel, new Text(), RBwindowTintArray[0], RBwindowTintArray[1], RBwindowTintArray[2], RBwindowTintArray[3]);
 
-        gPane.addRow(section9Label, 0 , 20, 2 ,1);
+        gPane.add(section9Label, 0 , 20, 2 ,1);
+        gPane.addRow(20, RBsection9Array[0], RBsection9Array[1], RBsection9Array[2], RBsection9Array[3]);
 
-        gPane.addRow(frontTreadDepthLabel, 0 ,21);
+        gPane.addRow(21, frontTreadDepthLabel, new Text(), RBfrontTreadDepthArray[0], RBfrontTreadDepthArray[1], RBfrontTreadDepthArray[2], RBfrontTreadDepthArray[3]);
 
-        gPane.addRow(rearTreadDepthLabel, 0 ,22);
+        gPane.addRow(22, rearTreadDepthLabel, new Text(), RBrearTreadDepthArray[0], RBrearTreadDepthArray[1], RBrearTreadDepthArray[2], RBrearTreadDepthArray[3]);
 
-        gPane.addRow(tirePressureLabel, 0 ,23, 2, 1);
+        gPane.add(tirePressureLabel, 0 ,23, 2, 1);
 
-        gPane.addRow(frontLeftLabel, 0 ,24);
+        gPane.addRow(24, frontLeftLabel, new Text());
 
-        gPane.addRow(frontRightLabel, 0, 25);
+        gPane.addRow(25, frontRightLabel, new Text());
 
-        gPane.addRow(rearLeftLabel, 0 , 26);
+        gPane.addRow(26, rearLeftLabel, new Text());
 
-        gPane.addRow(rearRightLabel, 0 , 27);
+        gPane.addRow(27, rearRightLabel, new Text());
 
-        gPane.addRow(section10Label, 0 , 28, 2, 1);
+        gPane.add(section10Label, 0 , 28, 2, 1);
+        gPane.addRow(28, RBsection10Array[0], RBsection10Array[1], RBsection10Array[2], RBsection10Array[3]);
 
-        gPane.addRow(section11Label, 0 , 29);
+        gPane.addRow(29, section11Label, new Text(), RBsection11Array[0], RBsection11Array[1], RBsection11Array[2], RBsection11Array[3]);
 
-        gPane.addRow(warningLightsLabel, 0 , 30);
+        gPane.addRow(30, warningLightsLabel, new Text());
 
-        gPane.addRow(ABSLabel, 0, 31);
+        gPane.addRow(31, ABSLabel, new Text());
 
-        gPane.addRow(TPMSLabel, 0, 32);
+        gPane.addRow(32, TPMSLabel, new Text());
 
-        gPane.addRow(checkEngineLabel, 0 , 33);
+        gPane.addRow(33, checkEngineLabel, new Text());
 
-        gPane.addRow(airBagsLabel, 0 , 34);
+        gPane.addRow(34, airBagsLabel, new Text());
 
-        gPane.addRow(electronicStabilityControlLabel, 0 , 35);
+        gPane.addRow(35, electronicStabilityControlLabel, new Text());
 
-        gPane.addRow(otherLightsLabel, 0 , 38);
+        gPane.addRow(36, otherLightsLabel, new Text());
 
-        gPane.addRow(fuelLevelLabel, 0 , 39);
+        gPane.addRow(37, fuelLevelLabel, new Text());
 
         //*** TESTING ***
         Button bt = new Button("This is a test");
@@ -292,7 +283,11 @@ public class Main extends Application {
                  * 3 = SUGGESTED PREVENTIVE
                  * 4 = SUGGESTED PERFORMANCE
                  */
-                System.out.println(section2TGroup.getSelectedToggle().getProperties().get(new String("gridpane-column")));
+                //TODO Be careful, if a RadioButton is left unchecked, this causes an error.
+                //TODO Could wrap all of the checks in if statements, or look into using error reporting.
+                //TODO Error reporting could allow for a notice before saving that something was left unfinished.
+                System.out.println(section2TGroup.getSelectedToggle().getProperties().get("gridpane-column"));
+                System.out.println(s1Text.getText());
             }
         });
 
