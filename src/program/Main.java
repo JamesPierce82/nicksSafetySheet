@@ -95,9 +95,7 @@ public class Main extends Application {
         Label otherLightsLabel = new Label("Other Lights");
         Label fuelLevelLabel = new Label("Fuel Level");
 
-        // Add other features such as checkboxes and comment boxes
-        ChoiceBox inspectionResultChoiceBox = new ChoiceBox(FXCollections.observableArrayList("Fail", "Pass"));
-
+        // Add the CheckBoxes for inspections
         ToggleGroup section1TGroup = new ToggleGroup();
         RadioButton[] RBsection1Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
         for(int i = 0; i < 4; i++){RBsection1Array[i].setToggleGroup(section1TGroup);}
@@ -186,8 +184,40 @@ public class Main extends Application {
         RadioButton[] RBsection11Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
         for(int i = 0; i < 4; i++){RBsection11Array[i].setToggleGroup(section11TGroup);}
 
+        // Add the assorted choice options for Column 1
+        ChoiceBox inspectionResultChoiceBox = new ChoiceBox(FXCollections.observableArrayList("Fail", "Pass"));
 
+        // Add the TextFields for the form
         TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+//        TextField s1Text = new TextField();
+
+
         // Add children to the GridPane.
         gPane.add(OSILabel,0, 0 , 3, 1);
         gPane.add(autoClinicLabel, 3, 0, 3, 1);
