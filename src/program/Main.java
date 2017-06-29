@@ -25,7 +25,7 @@ public class Main extends Application {
         GridPane gPane = new GridPane();
 
         gPane.setHgap(15);
-        gPane.setVgap(10);
+        gPane.setVgap(5);
 
         // Sets the alignment of each column
         ColumnConstraints column0 = new ColumnConstraints();
@@ -317,18 +317,29 @@ public class Main extends Application {
         gPane.addRow(5, s3Label, new Text(), RBs3Array[0], RBs3Array[1], RBs3Array[2], RBs3Array[3], s3Comment);
 
 
-        TextField innerTF = new TextField();
-        Label innerLabel = new Label("Inner");
-        HBox innerHBox = new HBox(innerTF, innerLabel);
-        innerHBox.setAlignment(Pos.CENTER_LEFT);
-        TextField outerTF = new TextField();
-        Label outerLabel = new Label("Outer");
-        HBox outerHBox = new HBox(outerTF, outerLabel);
-        outerHBox.setAlignment(Pos.CENTER_LEFT);
-        VBox lfpVBox = new VBox(innerHBox, outerHBox);
+        TextField lfpInnerTF = new TextField();
+        Label lfpInnerLabel = new Label("Inner");
+        HBox lfpInnerHBox = new HBox(lfpInnerTF, lfpInnerLabel);
+        lfpInnerHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField lfpOuterTF = new TextField();
+        Label lfpOuterLabel = new Label("Outer");
+        HBox lfpOuterHBox = new HBox(lfpOuterTF, lfpOuterLabel);
+        lfpOuterHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox lfpVBox = new VBox(lfpInnerHBox, lfpOuterHBox);
+
         gPane.addRow(6, lfpLabel, lfpVBox, RBlfpArray[0], RBlfpArray[1], RBlfpArray[2], RBlfpArray[3], lfpComment);
 
-        gPane.addRow(7, rfpLabel, new Text(), RBrfpArray[0], RBrfpArray[1], RBrfpArray[2], RBrfpArray[3], rfpComment);
+        TextField rfpInnerTF = new TextField();
+        Label rfpInnerLabel = new Label("Inner");
+        HBox rfpInnerHBox = new HBox(rfpInnerTF, rfpInnerLabel);
+        rfpInnerHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField rfpOuterTF = new TextField();
+        Label rfpOuterLabel = new Label("Outer");
+        HBox rfpOuterHBox = new HBox(rfpOuterTF, rfpOuterLabel);
+        rfpOuterHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox rfpVBox = new VBox(rfpInnerHBox, rfpOuterHBox);
+
+        gPane.addRow(7, rfpLabel, rfpVBox, RBrfpArray[0], RBrfpArray[1], RBrfpArray[2], RBrfpArray[3], rfpComment);
 
         gPane.addRow(8, lrpLabel, new Text(), RBlrpArray[0], RBlrpArray[1], RBlrpArray[2], RBlrpArray[3], lrpComment);
 
