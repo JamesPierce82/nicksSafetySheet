@@ -43,7 +43,9 @@ public class Main extends Application {
         gPane.getColumnConstraints().addAll(column0, column1, column2, column3, column4, column5);
 
 
-
+        // Show the grid lines - Not really necessary
+//        gPane.setGridLinesVisible(true);
+//        gPane.setStyle("-fx-background-color: #DDFFFF;");
 
         // Create a ScrollPane to host the GridPane inside.
         ScrollPane sPane = new ScrollPane(gPane);
@@ -326,6 +328,7 @@ public class Main extends Application {
         HBox lfpOuterHBox = new HBox(lfpOuterTF, lfpOuterLabel);
         lfpOuterHBox.setAlignment(Pos.CENTER_LEFT);
         VBox lfpVBox = new VBox(lfpInnerHBox, lfpOuterHBox);
+        lfpVBox.setSpacing(2);
 
         gPane.addRow(6, lfpLabel, lfpVBox, RBlfpArray[0], RBlfpArray[1], RBlfpArray[2], RBlfpArray[3], lfpComment);
 
@@ -338,12 +341,37 @@ public class Main extends Application {
         HBox rfpOuterHBox = new HBox(rfpOuterTF, rfpOuterLabel);
         rfpOuterHBox.setAlignment(Pos.CENTER_LEFT);
         VBox rfpVBox = new VBox(rfpInnerHBox, rfpOuterHBox);
+        rfpVBox.setSpacing(2);
 
         gPane.addRow(7, rfpLabel, rfpVBox, RBrfpArray[0], RBrfpArray[1], RBrfpArray[2], RBrfpArray[3], rfpComment);
 
-        gPane.addRow(8, lrpLabel, new Text(), RBlrpArray[0], RBlrpArray[1], RBlrpArray[2], RBlrpArray[3], lrpComment);
+        CheckBox lrpCB = new CheckBox("- N/A");
+        TextField lrpInnerTF = new TextField();
+        Label lrpInnerLabel = new Label("Inner");
+        HBox lrpInnerHBox = new HBox(lrpInnerTF, lrpInnerLabel);
+        lrpInnerHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField lrpOuterTF = new TextField();
+        Label lrpOuterLabel = new Label("Outer");
+        HBox lrpOuterHBox = new HBox(lrpOuterTF, lrpOuterLabel);
+        lrpOuterHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox lrpVBox = new VBox(lrpCB, lrpInnerHBox, lrpOuterHBox);
+        lrpVBox.setSpacing(2);
 
-        gPane.addRow(9,rrpLabel, new Text(), RBrrpArray[0], RBrrpArray[1], RBrrpArray[2], RBrrpArray[3], rrpComment);
+        gPane.addRow(8, lrpLabel, lrpVBox, RBlrpArray[0], RBlrpArray[1], RBlrpArray[2], RBlrpArray[3], lrpComment);
+
+        CheckBox rrpCB = new CheckBox("- N/A");
+        TextField rrpInnerTF = new TextField();
+        Label rrpInnerLabel = new Label("Inner");
+        HBox rrpInnerHBox = new HBox(rrpInnerTF, rrpInnerLabel);
+        rrpInnerHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField rrpOuterTF = new TextField();
+        Label rrpOuterLabel = new Label("Outer");
+        HBox rrpOuterHBox = new HBox(rrpOuterTF, rrpOuterLabel);
+        rrpOuterHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox rrpVBox = new VBox(rrpCB, rrpInnerHBox, rrpOuterHBox);
+        rrpVBox.setSpacing(2);
+
+        gPane.addRow(9,rrpLabel, rrpVBox, RBrrpArray[0], RBrrpArray[1], RBrrpArray[2], RBrrpArray[3], rrpComment);
 
         gPane.addRow(10, frdLabel, new Text(), RBfrdArray[0], RBfrdArray[1], RBfrdArray[2], RBfrdArray[3], frdComment);
 
@@ -431,7 +459,7 @@ public class Main extends Application {
             }
         });
 
-        sPane.setStyle("-fx-padding: 10px");
+        sPane.setStyle("-fx-padding: 10px;");
         // Create the scene, and show the window
         Scene scene = new Scene(sPane, 1024, 768);
         primaryStage.setTitle("Nick's Auto Clinic - Ontario Safety Inspection Report");
