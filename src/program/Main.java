@@ -38,12 +38,12 @@ public class Main extends Application {
         column5.setHalignment(HPos.CENTER);
         gPane.getColumnConstraints().addAll(column0, column1, column2, column3, column4, column5);
 
-        // Show the gridlines (this also shows gridlines around the hgap and vgap segments
-//        gPane.setGridLinesVisible(true);
+
 
 
         // Create a ScrollPane to host the GridPane inside.
         ScrollPane sPane = new ScrollPane(gPane);
+
 
         // Create children to be placed in gPane
         Label OSILabel = new Label("Ontario Safety Inspection");
@@ -59,10 +59,10 @@ public class Main extends Application {
 
         // Row labels
         Label inspectionResultLabel = new Label("INSPECTION RESULT");
-        Label section1Label = new Label("SECTION 1. POWERTRAIN");
-        Label section2Label = new Label("SECTION 2. SUSPENSION");
-        Label section3Label = new Label("SECTION 3. BRAKE SYSTEMS");
-        Label leftFrontPadsLabel = new Label("Left Front Pads(mm)");
+        Label s1Label = new Label("SECTION 1. POWERTRAIN");
+        Label s2Label = new Label("SECTION 2. SUSPENSION");
+        Label s3Label = new Label("SECTION 3. BRAKE SYSTEMS");
+        Label lfpLabel = new Label("Left Front Pads(mm)");
         Label rightFrontPadsLabel = new Label("RIght Front Pads(mm)");
         Label leftRearPadsLabel = new Label("Left Rear Pads(mm)");
         Label rightRearPadsLabel = new Label("Right Rear Pads(mm)");
@@ -189,33 +189,33 @@ public class Main extends Application {
 
         // Add the TextFields for the form
         TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
-//        TextField s1Text = new TextField();
+        TextField s2Text = new TextField();
+        TextField s3Text = new TextField();
+        TextField lfpText = new TextField();
+        TextField rfpText = new TextField();
+        TextField lrpText = new TextField();
+        TextField rrpText = new TextField();
+        TextField frdText = new TextField();
+        TextField rrdText = new TextField();
+        TextField fbsText = new TextField();
+        TextField rbsText = new TextField();
+        TextField s4Text = new TextField();
+        TextField s5Text = new TextField();
+        TextField s6Text = new TextField();
+        TextField s7Text = new TextField();
+        TextField s8Text = new TextField();
+        TextField wtText = new TextField();
+        TextField s9Text = new TextField();
+        TextField ftdText = new TextField();
+        TextField rtdText = new TextField();
+        TextField tpText = new TextField();
+        TextField flText = new TextField();
+        TextField frText = new TextField();
+        TextField rlText = new TextField();
+        TextField rrText = new TextField();
+        TextField s10Text = new TextField();
+        TextField s11Text = new TextField();
+        TextField wlText = new TextField();
 
 
         // Add children to the GridPane.
@@ -226,13 +226,13 @@ public class Main extends Application {
 
         gPane.addRow(2, inspectionResultLabel, inspectionResultChoiceBox);
 
-        gPane.addRow(3, section1Label, new Text(), RBsection1Array[0], RBsection1Array[1], RBsection1Array[2], RBsection1Array[3], s1Text);
+        gPane.addRow(3, s1Label, new Text(), RBsection1Array[0], RBsection1Array[1], RBsection1Array[2], RBsection1Array[3], s1Text);
 
-        gPane.addRow(4, section2Label, new Text(), RBsection2Array[0], RBsection2Array[1], RBsection2Array[2], RBsection2Array[3]);
+        gPane.addRow(4, s2Label, new Text(), RBsection2Array[0], RBsection2Array[1], RBsection2Array[2], RBsection2Array[3]);
 
-        gPane.addRow(5, section3Label, new Text(), RBsection3Array[0], RBsection3Array[1], RBsection3Array[2], RBsection3Array[3]);
+        gPane.addRow(5, s3Label, new Text(), RBsection3Array[0], RBsection3Array[1], RBsection3Array[2], RBsection3Array[3]);
 
-        gPane.addRow(6, leftFrontPadsLabel, new Text(), RBleftFrontPadsArray[0], RBleftFrontPadsArray[1], RBleftFrontPadsArray[2], RBleftFrontPadsArray[3]);
+        gPane.addRow(6, lfpLabel, new Text(), RBleftFrontPadsArray[0], RBleftFrontPadsArray[1], RBleftFrontPadsArray[2], RBleftFrontPadsArray[3]);
 
         gPane.addRow(7, rightFrontPadsLabel, new Text(), RBrightFrontPadsArray[0], RBrightFrontPadsArray[1], RBrightFrontPadsArray[2], RBrightFrontPadsArray[3]);
 
@@ -321,6 +321,7 @@ public class Main extends Application {
             }
         });
 
+        sPane.setStyle("-fx-padding: 10px");
         // Create the scene, and show the window
         Scene scene = new Scene(sPane, 1024, 768);
         primaryStage.setTitle("Nick's Auto Clinic - Ontario Safety Inspection Report");
