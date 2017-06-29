@@ -5,10 +5,14 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
+import javafx.geometry.Pos;
+import javafx.geometry.VPos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -63,30 +67,30 @@ public class Main extends Application {
         Label s2Label = new Label("SECTION 2. SUSPENSION");
         Label s3Label = new Label("SECTION 3. BRAKE SYSTEMS");
         Label lfpLabel = new Label("Left Front Pads(mm)");
-        Label rightFrontPadsLabel = new Label("RIght Front Pads(mm)");
-        Label leftRearPadsLabel = new Label("Left Rear Pads(mm)");
-        Label rightRearPadsLabel = new Label("Right Rear Pads(mm)");
-        Label frontRotorsDrumsLabel = new Label("Front Rotors or Drums(mm)");
-        Label rearRotorsDrumsLabel = new Label("Rear Rotors or Drums(mm)");
-        Label frontBrakeShoesLabel = new Label("Front Brake Shoes(mm)");
-        Label rearBrakeShoesLabel = new Label("Rear Brake Shoes(mm)");
-        Label section4Label = new Label("SECTION 4. STEERING");
-        Label section5Label = new Label("SECTION 5. INSTRUMENTS AND AUXILIARY EQUIPMENT");
-        Label section6label = new Label("SECTION 6. LAMPS");
-        Label section7Label  = new Label("SECTION 7. ELECTRICAL SYSTEMS");
-        Label section8Label  = new Label("SECTION 8. BODY");
-        Label windowTintLabel  = new Label("Window Tint");
-        Label section9Label = new Label("SECTION 9. TIRE AND WHEEL");
-        Label frontTreadDepthLabel  = new Label("Front Tread Depth");
-        Label rearTreadDepthLabel  = new Label("Rear Tread Depth");
-        Label tirePressureLabel = new Label("Tire Pressure(PSI) - Only req'd if adjusted by more than 5 PSI");
-        Label frontLeftLabel  = new Label("Front Left");
-        Label frontRightLabel  = new Label("Front Right");
-        Label rearLeftLabel = new Label("Rear left");
-        Label rearRightLabel  = new Label("Rear Right");
-        Label section10Label = new Label("SECTION 10. COUPLING DEVICES");
-        Label section11Label = new Label("SECTION 11. ROAD TEST");
-        Label warningLightsLabel = new Label("Warning Lights(tell-tales)");
+        Label rfpLabel = new Label("RIght Front Pads(mm)");
+        Label lrpLabel = new Label("Left Rear Pads(mm)");
+        Label rrpLabel = new Label("Right Rear Pads(mm)");
+        Label frdLabel = new Label("Front Rotors or Drums(mm)");
+        Label rrdLabel = new Label("Rear Rotors or Drums(mm)");
+        Label fbsLabel = new Label("Front Brake Shoes(mm)");
+        Label rbsLabel = new Label("Rear Brake Shoes(mm)");
+        Label s4Label = new Label("SECTION 4. STEERING");
+        Label s5Label = new Label("SECTION 5. INSTRUMENTS AND AUXILIARY EQUIPMENT");
+        Label s6label = new Label("SECTION 6. LAMPS");
+        Label s7Label  = new Label("SECTION 7. ELECTRICAL SYSTEMS");
+        Label s8Label  = new Label("SECTION 8. BODY");
+        Label wtLabel  = new Label("Window Tint");
+        Label s9Label = new Label("SECTION 9. TIRE AND WHEEL");
+        Label ftdLabel  = new Label("Front Tread Depth");
+        Label rtdLabel  = new Label("Rear Tread Depth");
+        Label tpLabel = new Label("Tire Pressure(PSI) - Only req'd if adjusted by more than 5 PSI");
+        Label flLabel  = new Label("Front Left");
+        Label frLabel  = new Label("Front Right");
+        Label rlLabel = new Label("Rear left");
+        Label rrLabel  = new Label("Rear Right");
+        Label s10Label = new Label("SECTION 10. COUPLING DEVICES");
+        Label s11Label = new Label("SECTION 11. ROAD TEST");
+        Label wlLabel = new Label("Warning Lights(tell-tales)");
         Label ABSLabel = new Label("ABS");
         Label TPMSLabel = new Label("TPMS");
         Label checkEngineLabel = new Label("Check Engine");
@@ -96,126 +100,206 @@ public class Main extends Application {
         Label fuelLevelLabel = new Label("Fuel Level");
 
         // Add the CheckBoxes for inspections
-        ToggleGroup section1TGroup = new ToggleGroup();
-        RadioButton[] RBsection1Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection1Array[i].setToggleGroup(section1TGroup);}
+        ToggleGroup s1TGroup = new ToggleGroup();
+        RadioButton[] RBs1Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs1Array[i].setToggleGroup(s1TGroup);}
 
-        ToggleGroup section2TGroup = new ToggleGroup();
-        RadioButton[] RBsection2Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection2Array[i].setToggleGroup(section2TGroup);}
+        ToggleGroup s2TGroup = new ToggleGroup();
+        RadioButton[] RBs2Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs2Array[i].setToggleGroup(s2TGroup);}
 
-        ToggleGroup section3TGroup = new ToggleGroup();
-        RadioButton[] RBsection3Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection3Array[i].setToggleGroup(section3TGroup);}
+        ToggleGroup s3TGroup = new ToggleGroup();
+        RadioButton[] RBs3Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs3Array[i].setToggleGroup(s3TGroup);}
 
-        ToggleGroup leftFrontPadsTGroup = new ToggleGroup();
-        RadioButton[] RBleftFrontPadsArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBleftFrontPadsArray[i].setToggleGroup(leftFrontPadsTGroup); }
+        ToggleGroup lfpTGroup = new ToggleGroup();
+        RadioButton[] RBlfpArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBlfpArray[i].setToggleGroup(lfpTGroup); }
 
-        ToggleGroup rightFrontPadsTGroup = new ToggleGroup();
-        RadioButton[] RBrightFrontPadsArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){ RBrightFrontPadsArray[i].setToggleGroup(rightFrontPadsTGroup); }
+        ToggleGroup rfpTGroup = new ToggleGroup();
+        RadioButton[] RBrfpArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){ RBrfpArray[i].setToggleGroup(rfpTGroup); }
 
-        ToggleGroup leftRearPadsTGroup = new ToggleGroup();
-        RadioButton[] RBleftRearPadsArray = { new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){ RBleftRearPadsArray[i].setToggleGroup(leftRearPadsTGroup);}
+        ToggleGroup lrpTGroup = new ToggleGroup();
+        RadioButton[] RBlrpArray = { new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){ RBlrpArray[i].setToggleGroup(lrpTGroup);}
 
-        ToggleGroup rightRearPadsTGroup = new ToggleGroup();
-        RadioButton[] RBrightRearPadsArray = { new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){ RBrightRearPadsArray[i].setToggleGroup(rightRearPadsTGroup);}
+        ToggleGroup rrpTGroup = new ToggleGroup();
+        RadioButton[] RBrrpArray = { new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){ RBrrpArray[i].setToggleGroup(rrpTGroup);}
 
-        ToggleGroup frontRotorsDrumsTGroup = new ToggleGroup();
-        RadioButton[] RBfrontRotorsDrumsArray = { new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){ RBfrontRotorsDrumsArray[i].setToggleGroup(frontRotorsDrumsTGroup);}
+        ToggleGroup frdTGroup = new ToggleGroup();
+        RadioButton[] RBfrdArray = { new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){ RBfrdArray[i].setToggleGroup(frdTGroup);}
 
-        ToggleGroup rearRotorsDrumsTGroup = new ToggleGroup();
-        RadioButton[] RBrearRotorsDrumsArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBrearRotorsDrumsArray[i].setToggleGroup(rearRotorsDrumsTGroup);}
+        ToggleGroup rrdTGroup = new ToggleGroup();
+        RadioButton[] RBrrdArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBrrdArray[i].setToggleGroup(rrdTGroup);}
 
-        ToggleGroup frontBrakeShoesTGroup = new ToggleGroup();
-        RadioButton[] RBfrontBrakeShoesArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBfrontBrakeShoesArray[i].setToggleGroup(frontBrakeShoesTGroup);}
+        ToggleGroup fbsTGroup = new ToggleGroup();
+        RadioButton[] RBfbsArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBfbsArray[i].setToggleGroup(fbsTGroup);}
 
-        ToggleGroup rearBrakeShoesTGroup = new ToggleGroup();
-        RadioButton[] RBrearBrakeShoesArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBrearBrakeShoesArray[i].setToggleGroup(rearBrakeShoesTGroup);}
+        ToggleGroup rbsTGroup = new ToggleGroup();
+        RadioButton[] RBrbsArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBrbsArray[i].setToggleGroup(rbsTGroup);}
 
-        ToggleGroup section4TGroup = new ToggleGroup();
-        RadioButton[] RBsection4Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection4Array[i].setToggleGroup(section4TGroup);}
+        ToggleGroup s4TGroup = new ToggleGroup();
+        RadioButton[] RBs4Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs4Array[i].setToggleGroup(s4TGroup);}
 
-        ToggleGroup section5TGroup = new ToggleGroup();
-        RadioButton[] RBsection5Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection5Array[i].setToggleGroup(section5TGroup);}
+        ToggleGroup s5TGroup = new ToggleGroup();
+        RadioButton[] RBs5Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs5Array[i].setToggleGroup(s5TGroup);}
 
-        ToggleGroup section6TGroup = new ToggleGroup();
-        RadioButton[] RBsection6Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection6Array[i].setToggleGroup(section6TGroup);}
+        ToggleGroup s6TGroup = new ToggleGroup();
+        RadioButton[] RBs6Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs6Array[i].setToggleGroup(s6TGroup);}
 
-        ToggleGroup section7TGroup = new ToggleGroup();
-        RadioButton[] RBsection7Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection7Array[i].setToggleGroup(section7TGroup);}
+        ToggleGroup s7TGroup = new ToggleGroup();
+        RadioButton[] RBs7Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs7Array[i].setToggleGroup(s7TGroup);}
 
-        ToggleGroup section8TGroup = new ToggleGroup();
-        RadioButton[] RBsection8Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection8Array[i].setToggleGroup(section8TGroup);}
+        ToggleGroup s8TGroup = new ToggleGroup();
+        RadioButton[] RBs8Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs8Array[i].setToggleGroup(s8TGroup);}
 
-        ToggleGroup windowTintTGroup = new ToggleGroup();
-        RadioButton[] RBwindowTintArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBwindowTintArray[i].setToggleGroup(windowTintTGroup);}
+        ToggleGroup wtTGroup = new ToggleGroup();
+        RadioButton[] RBwtArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBwtArray[i].setToggleGroup(wtTGroup);}
 
-        ToggleGroup section9TGroup = new ToggleGroup();
-        RadioButton[] RBsection9Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection9Array[i].setToggleGroup(section9TGroup);}
+        ToggleGroup s9TGroup = new ToggleGroup();
+        RadioButton[] RBs9Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs9Array[i].setToggleGroup(s9TGroup);}
 
-        ToggleGroup frontTreadDepthTGroup = new ToggleGroup();
-        RadioButton[] RBfrontTreadDepthArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBfrontTreadDepthArray[i].setToggleGroup(frontTreadDepthTGroup);}
+        ToggleGroup ftdTGroup = new ToggleGroup();
+        RadioButton[] RBftdArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBftdArray[i].setToggleGroup(ftdTGroup);}
 
-        ToggleGroup rearTreadDepthTGroup = new ToggleGroup();
-        RadioButton[] RBrearTreadDepthArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBrearTreadDepthArray[i].setToggleGroup(rearTreadDepthTGroup);}
+        ToggleGroup rtdTGroup = new ToggleGroup();
+        RadioButton[] RBrtdArray = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBrtdArray[i].setToggleGroup(rtdTGroup);}
 
-        ToggleGroup section10TGroup = new ToggleGroup();
-        RadioButton[] RBsection10Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection10Array[i].setToggleGroup(section10TGroup);}
+        ToggleGroup s10TGroup = new ToggleGroup();
+        RadioButton[] RBs10Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs10Array[i].setToggleGroup(s10TGroup);}
 
-        ToggleGroup section11TGroup = new ToggleGroup();
-        RadioButton[] RBsection11Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
-        for(int i = 0; i < 4; i++){RBsection11Array[i].setToggleGroup(section11TGroup);}
+        ToggleGroup s11TGroup = new ToggleGroup();
+        RadioButton[] RBs11Array = {new RadioButton(), new RadioButton(), new RadioButton(), new RadioButton()};
+        for(int i = 0; i < 4; i++){RBs11Array[i].setToggleGroup(s11TGroup);}
 
         // Add the assorted choice options for Column 1
         ChoiceBox inspectionResultChoiceBox = new ChoiceBox(FXCollections.observableArrayList("Fail", "Pass"));
 
         // Add the TextFields for the form
-        TextField s1Text = new TextField();
-        TextField s2Text = new TextField();
-        TextField s3Text = new TextField();
-        TextField lfpText = new TextField();
-        TextField rfpText = new TextField();
-        TextField lrpText = new TextField();
-        TextField rrpText = new TextField();
-        TextField frdText = new TextField();
-        TextField rrdText = new TextField();
-        TextField fbsText = new TextField();
-        TextField rbsText = new TextField();
-        TextField s4Text = new TextField();
-        TextField s5Text = new TextField();
-        TextField s6Text = new TextField();
-        TextField s7Text = new TextField();
-        TextField s8Text = new TextField();
-        TextField wtText = new TextField();
-        TextField s9Text = new TextField();
-        TextField ftdText = new TextField();
-        TextField rtdText = new TextField();
-        TextField tpText = new TextField();
-        TextField flText = new TextField();
-        TextField frText = new TextField();
-        TextField rlText = new TextField();
-        TextField rrText = new TextField();
-        TextField s10Text = new TextField();
-        TextField s11Text = new TextField();
-        TextField wlText = new TextField();
+        TextArea s1Comment = new TextArea();
+        s1Comment.setPrefRowCount(1);
+        s1Comment.setPrefColumnCount(16);
+        s1Comment.setWrapText(true);
+        TextArea s2Comment = new TextArea();
+        s2Comment.setPrefRowCount(1);
+        s2Comment.setPrefColumnCount(16);
+        s2Comment.setWrapText(true);
+        TextArea s3Comment = new TextArea();
+        s3Comment.setPrefRowCount(1);
+        s3Comment.setPrefColumnCount(16);
+        s3Comment.setWrapText(true);
+        TextArea lfpComment = new TextArea();
+        lfpComment.setPrefRowCount(1);
+        lfpComment.setPrefColumnCount(16);
+        lfpComment.setWrapText(true);
+        TextArea rfpComment = new TextArea();
+        rfpComment.setPrefRowCount(1);
+        rfpComment.setPrefColumnCount(16);
+        rfpComment.setWrapText(true);
+        TextArea lrpComment = new TextArea();
+        lrpComment.setPrefRowCount(1);
+        lrpComment.setPrefColumnCount(16);
+        lrpComment.setWrapText(true);
+        TextArea rrpComment = new TextArea();
+        rrpComment.setPrefRowCount(1);
+        rrpComment.setPrefColumnCount(16);
+        rrpComment.setWrapText(true);
+        TextArea frdComment = new TextArea();
+        frdComment.setPrefRowCount(1);
+        frdComment.setPrefColumnCount(16);
+        frdComment.setWrapText(true);
+        TextArea rrdComment = new TextArea();
+        rrdComment.setPrefRowCount(1);
+        rrdComment.setPrefColumnCount(16);
+        rrdComment.setWrapText(true);
+        TextArea fbsComment = new TextArea();
+        fbsComment.setPrefRowCount(1);
+        fbsComment.setPrefColumnCount(16);
+        fbsComment.setWrapText(true);
+        TextArea rbsComment = new TextArea();
+        rbsComment.setPrefRowCount(1);
+        rbsComment.setPrefColumnCount(16);
+        rbsComment.setWrapText(true);
+        TextArea s4Comment = new TextArea();
+        s4Comment.setPrefRowCount(1);
+        s4Comment.setPrefColumnCount(16);
+        s4Comment.setWrapText(true);
+        TextArea s5Comment = new TextArea();
+        s5Comment.setPrefRowCount(1);
+        s5Comment.setPrefColumnCount(16);
+        s5Comment.setWrapText(true);
+        TextArea s6Comment = new TextArea();
+        s6Comment.setPrefRowCount(1);
+        s6Comment.setPrefColumnCount(16);
+        s6Comment.setWrapText(true);
+        TextArea s7Comment = new TextArea();
+        s7Comment.setPrefRowCount(1);
+        s7Comment.setPrefColumnCount(16);
+        s7Comment.setWrapText(true);
+        TextArea s8Comment = new TextArea();
+        s8Comment.setPrefRowCount(1);
+        s8Comment.setPrefColumnCount(16);
+        s8Comment.setWrapText(true);
+        TextArea wtComment = new TextArea();
+        wtComment.setPrefRowCount(1);
+        wtComment.setPrefColumnCount(16);
+        wtComment.setWrapText(true);
+        TextArea s9Comment = new TextArea();
+        s9Comment.setPrefRowCount(1);
+        s9Comment.setPrefColumnCount(16);
+        s9Comment.setWrapText(true);
+        TextArea ftdComment = new TextArea();
+        ftdComment.setPrefRowCount(1);
+        ftdComment.setPrefColumnCount(16);
+        ftdComment.setWrapText(true);
+        TextArea rtdComment = new TextArea();
+        rtdComment.setPrefRowCount(1);
+        rtdComment.setPrefColumnCount(16);
+        rtdComment.setWrapText(true);
+        TextArea tpComment = new TextArea();
+        tpComment.setPrefRowCount(1);
+        tpComment.setPrefColumnCount(16);
+        tpComment.setWrapText(true);
+        TextArea flComment = new TextArea();
+        flComment.setPrefRowCount(1);
+        flComment.setPrefColumnCount(16);
+        flComment.setWrapText(true);
+        TextArea frComment = new TextArea();
+        frComment.setPrefRowCount(1);
+        frComment.setPrefColumnCount(16);
+        frComment.setWrapText(true);
+        TextArea rlComment = new TextArea();
+        rlComment.setPrefRowCount(1);
+        rlComment.setPrefColumnCount(16);
+        rlComment.setWrapText(true);
+        TextArea rrComment = new TextArea();
+        rrComment.setPrefRowCount(1);
+        rrComment.setPrefColumnCount(16);
+        rrComment.setWrapText(true);
+        TextArea s10Comment = new TextArea();
+        s10Comment.setPrefRowCount(1);
+        s10Comment.setPrefColumnCount(16);
+        s10Comment.setWrapText(true);
+        TextArea s11Comment = new TextArea();
+        s11Comment.setPrefRowCount(1);
+        s11Comment.setPrefColumnCount(16);
+        s11Comment.setWrapText(true);
 
 
         // Add children to the GridPane.
@@ -226,65 +310,80 @@ public class Main extends Application {
 
         gPane.addRow(2, inspectionResultLabel, inspectionResultChoiceBox);
 
-        gPane.addRow(3, s1Label, new Text(), RBsection1Array[0], RBsection1Array[1], RBsection1Array[2], RBsection1Array[3], s1Text);
+        gPane.addRow(3, s1Label, new Text(), RBs1Array[0], RBs1Array[1], RBs1Array[2], RBs1Array[3], s1Comment);
 
-        gPane.addRow(4, s2Label, new Text(), RBsection2Array[0], RBsection2Array[1], RBsection2Array[2], RBsection2Array[3]);
+        gPane.addRow(4, s2Label, new Text(), RBs2Array[0], RBs2Array[1], RBs2Array[2], RBs2Array[3], s2Comment);
 
-        gPane.addRow(5, s3Label, new Text(), RBsection3Array[0], RBsection3Array[1], RBsection3Array[2], RBsection3Array[3]);
+        gPane.addRow(5, s3Label, new Text(), RBs3Array[0], RBs3Array[1], RBs3Array[2], RBs3Array[3], s3Comment);
 
-        gPane.addRow(6, lfpLabel, new Text(), RBleftFrontPadsArray[0], RBleftFrontPadsArray[1], RBleftFrontPadsArray[2], RBleftFrontPadsArray[3]);
 
-        gPane.addRow(7, rightFrontPadsLabel, new Text(), RBrightFrontPadsArray[0], RBrightFrontPadsArray[1], RBrightFrontPadsArray[2], RBrightFrontPadsArray[3]);
+        TextField innerTF = new TextField();
+        Label innerLabel = new Label("Inner");
+        HBox innerHBox = new HBox(innerTF, innerLabel);
+        innerHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField outerTF = new TextField();
+        Label outerLabel = new Label("Outer");
+        HBox outerHBox = new HBox(outerTF, outerLabel);
+        outerHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox lfpVBox = new VBox(innerHBox, outerHBox);
+        gPane.addRow(6, lfpLabel, lfpVBox, RBlfpArray[0], RBlfpArray[1], RBlfpArray[2], RBlfpArray[3], lfpComment);
 
-        gPane.addRow(8, leftRearPadsLabel, new Text(), RBleftRearPadsArray[0], RBleftRearPadsArray[1], RBleftRearPadsArray[2], RBleftRearPadsArray[3]);
+        gPane.addRow(7, rfpLabel, new Text(), RBrfpArray[0], RBrfpArray[1], RBrfpArray[2], RBrfpArray[3], rfpComment);
 
-        gPane.addRow(9,rightRearPadsLabel, new Text(), RBrightRearPadsArray[0], RBrightRearPadsArray[1], RBrightRearPadsArray[2], RBrightRearPadsArray[3]);
+        gPane.addRow(8, lrpLabel, new Text(), RBlrpArray[0], RBlrpArray[1], RBlrpArray[2], RBlrpArray[3], lrpComment);
 
-        gPane.addRow(10, frontRotorsDrumsLabel, new Text(), RBfrontRotorsDrumsArray[0], RBfrontRotorsDrumsArray[1], RBfrontRotorsDrumsArray[2], RBfrontRotorsDrumsArray[3]);
+        gPane.addRow(9,rrpLabel, new Text(), RBrrpArray[0], RBrrpArray[1], RBrrpArray[2], RBrrpArray[3], rrpComment);
 
-        gPane.addRow(11,rearRotorsDrumsLabel, new Text(), RBrearRotorsDrumsArray[0], RBrearRotorsDrumsArray[1], RBrearRotorsDrumsArray[2], RBrearRotorsDrumsArray[3]);
+        gPane.addRow(10, frdLabel, new Text(), RBfrdArray[0], RBfrdArray[1], RBfrdArray[2], RBfrdArray[3], frdComment);
 
-        gPane.addRow(12, frontBrakeShoesLabel, new Text(), RBfrontBrakeShoesArray[0], RBfrontBrakeShoesArray[1], RBfrontBrakeShoesArray[2], RBfrontBrakeShoesArray[3]);
+        gPane.addRow(11,rrdLabel, new Text(), RBrrdArray[0], RBrrdArray[1], RBrrdArray[2], RBrrdArray[3], rrdComment);
 
-        gPane.addRow(13, rearBrakeShoesLabel, new Text(), RBrearBrakeShoesArray[0], RBrearBrakeShoesArray[1], RBrearBrakeShoesArray[2], RBrearBrakeShoesArray[3]);
+        gPane.addRow(12, fbsLabel, new Text(), RBfbsArray[0], RBfbsArray[1], RBfbsArray[2], RBfbsArray[3], fbsComment);
 
-        gPane.addRow(14, section4Label, new Text(), RBsection4Array[0], RBsection4Array[1], RBsection4Array[2], RBsection4Array[3]);
+        gPane.addRow(13, rbsLabel, new Text(), RBrbsArray[0], RBrbsArray[1], RBrbsArray[2], RBrbsArray[3], rbsComment);
 
-        gPane.add(section5Label, 0 , 15, 2, 1);
-        gPane.addRow(15, RBsection5Array[0], RBsection5Array[1], RBsection5Array[2], RBsection5Array[3]);
+        gPane.addRow(14, s4Label, new Text(), RBs4Array[0], RBs4Array[1], RBs4Array[2], RBs4Array[3], s4Comment);
 
-        gPane.addRow(16, section6label, new Text(), RBsection6Array[0], RBsection6Array[1], RBsection6Array[2], RBsection6Array[3]);
+        gPane.add(s5Label, 0 , 15, 2, 1);
+        gPane.addRow(15, RBs5Array[0], RBs5Array[1], RBs5Array[2], RBs5Array[3], s5Comment);
 
-        gPane.add(section7Label, 0 , 17,2, 1);
-        gPane.addRow(17, RBsection7Array[0], RBsection7Array[1], RBsection7Array[2], RBsection7Array[3]);
+        gPane.addRow(16, s6label, new Text(), RBs6Array[0], RBs6Array[1], RBs6Array[2], RBs6Array[3], s6Comment);
 
-        gPane.addRow(18, section8Label, new Text(), RBsection8Array[0], RBsection8Array[1], RBsection8Array[2], RBsection8Array[3]);
+        gPane.add(s7Label, 0 , 17,2, 1);
+        gPane.addRow(17, RBs7Array[0], RBs7Array[1], RBs7Array[2], RBs7Array[3], s7Comment);
 
-        gPane.addRow(19,windowTintLabel, new Text(), RBwindowTintArray[0], RBwindowTintArray[1], RBwindowTintArray[2], RBwindowTintArray[3]);
+        gPane.addRow(18, s8Label, new Text(), RBs8Array[0], RBs8Array[1], RBs8Array[2], RBs8Array[3], s8Comment);
 
-        gPane.add(section9Label, 0 , 20, 2 ,1);
-        gPane.addRow(20, RBsection9Array[0], RBsection9Array[1], RBsection9Array[2], RBsection9Array[3]);
+        gPane.addRow(19,wtLabel, new Text(), RBwtArray[0], RBwtArray[1], RBwtArray[2], RBwtArray[3], wtComment);
 
-        gPane.addRow(21, frontTreadDepthLabel, new Text(), RBfrontTreadDepthArray[0], RBfrontTreadDepthArray[1], RBfrontTreadDepthArray[2], RBfrontTreadDepthArray[3]);
+        gPane.add(s9Label, 0 , 20, 2 ,1);
+        gPane.addRow(20, RBs9Array[0], RBs9Array[1], RBs9Array[2], RBs9Array[3], s9Comment);
 
-        gPane.addRow(22, rearTreadDepthLabel, new Text(), RBrearTreadDepthArray[0], RBrearTreadDepthArray[1], RBrearTreadDepthArray[2], RBrearTreadDepthArray[3]);
+        gPane.addRow(21, ftdLabel, new Text(), RBftdArray[0], RBftdArray[1], RBftdArray[2], RBftdArray[3], ftdComment);
 
-        gPane.add(tirePressureLabel, 0 ,23, 2, 1);
+        gPane.addRow(22, rtdLabel, new Text(), RBrtdArray[0], RBrtdArray[1], RBrtdArray[2], RBrtdArray[3], rtdComment);
 
-        gPane.addRow(24, frontLeftLabel, new Text());
+        gPane.add(tpLabel, 0 ,23, 2, 1);
+        gPane.add(tpComment, 6, 23, 1, 1);
 
-        gPane.addRow(25, frontRightLabel, new Text());
+        gPane.addRow(24, flLabel, new Text());
+        gPane.add(flComment, 6, 24, 1,1);
 
-        gPane.addRow(26, rearLeftLabel, new Text());
+        gPane.addRow(25, frLabel, new Text());
+        gPane.add(frComment, 6, 25, 1,1);
 
-        gPane.addRow(27, rearRightLabel, new Text());
+        gPane.addRow(26, rlLabel, new Text());
+        gPane.add(rlComment, 6, 26, 1,1);
 
-        gPane.add(section10Label, 0 , 28, 2, 1);
-        gPane.addRow(28, RBsection10Array[0], RBsection10Array[1], RBsection10Array[2], RBsection10Array[3]);
+        gPane.addRow(27, rrLabel, new Text());
+        gPane.add(rrComment, 6, 27, 1,1);
 
-        gPane.addRow(29, section11Label, new Text(), RBsection11Array[0], RBsection11Array[1], RBsection11Array[2], RBsection11Array[3]);
+        gPane.add(s10Label, 0 , 28, 2, 1);
+        gPane.addRow(28, RBs10Array[0], RBs10Array[1], RBs10Array[2], RBs10Array[3], s10Comment);
 
-        gPane.addRow(30, warningLightsLabel, new Text());
+        gPane.addRow(29, s11Label, new Text(), RBs11Array[0], RBs11Array[1], RBs11Array[2], RBs11Array[3], s11Comment);
+
+        gPane.addRow(30, wlLabel, new Text());
 
         gPane.addRow(31, ABSLabel, new Text());
 
@@ -316,8 +415,8 @@ public class Main extends Application {
                 //TODO Be careful, if a RadioButton is left unchecked, this causes an error.
                 //TODO Could wrap all of the checks in if statements, or look into using error reporting.
                 //TODO Error reporting could allow for a notice before saving that something was left unfinished.
-                System.out.println(section2TGroup.getSelectedToggle().getProperties().get("gridpane-column"));
-                System.out.println(s1Text.getText());
+                System.out.println(s2TGroup.getSelectedToggle().getProperties().get("gridpane-column"));
+                System.out.println(s1Comment.getText());
             }
         });
 
