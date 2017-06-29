@@ -6,9 +6,13 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
-import javafx.geometry.VPos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -196,111 +200,111 @@ public class Main extends Application {
         // Add the TextFields for the form
         TextArea s1Comment = new TextArea();
         s1Comment.setPrefRowCount(1);
-        s1Comment.setPrefColumnCount(16);
+        s1Comment.setPrefColumnCount(13);
         s1Comment.setWrapText(true);
         TextArea s2Comment = new TextArea();
         s2Comment.setPrefRowCount(1);
-        s2Comment.setPrefColumnCount(16);
+        s2Comment.setPrefColumnCount(13);
         s2Comment.setWrapText(true);
         TextArea s3Comment = new TextArea();
         s3Comment.setPrefRowCount(1);
-        s3Comment.setPrefColumnCount(16);
+        s3Comment.setPrefColumnCount(13);
         s3Comment.setWrapText(true);
         TextArea lfpComment = new TextArea();
         lfpComment.setPrefRowCount(1);
-        lfpComment.setPrefColumnCount(16);
+        lfpComment.setPrefColumnCount(13);
         lfpComment.setWrapText(true);
         TextArea rfpComment = new TextArea();
         rfpComment.setPrefRowCount(1);
-        rfpComment.setPrefColumnCount(16);
+        rfpComment.setPrefColumnCount(13);
         rfpComment.setWrapText(true);
         TextArea lrpComment = new TextArea();
         lrpComment.setPrefRowCount(1);
-        lrpComment.setPrefColumnCount(16);
+        lrpComment.setPrefColumnCount(13);
         lrpComment.setWrapText(true);
         TextArea rrpComment = new TextArea();
         rrpComment.setPrefRowCount(1);
-        rrpComment.setPrefColumnCount(16);
+        rrpComment.setPrefColumnCount(13);
         rrpComment.setWrapText(true);
         TextArea frdComment = new TextArea();
         frdComment.setPrefRowCount(1);
-        frdComment.setPrefColumnCount(16);
+        frdComment.setPrefColumnCount(13);
         frdComment.setWrapText(true);
         TextArea rrdComment = new TextArea();
         rrdComment.setPrefRowCount(1);
-        rrdComment.setPrefColumnCount(16);
+        rrdComment.setPrefColumnCount(13);
         rrdComment.setWrapText(true);
         TextArea fbsComment = new TextArea();
         fbsComment.setPrefRowCount(1);
-        fbsComment.setPrefColumnCount(16);
+        fbsComment.setPrefColumnCount(13);
         fbsComment.setWrapText(true);
         TextArea rbsComment = new TextArea();
         rbsComment.setPrefRowCount(1);
-        rbsComment.setPrefColumnCount(16);
+        rbsComment.setPrefColumnCount(13);
         rbsComment.setWrapText(true);
         TextArea s4Comment = new TextArea();
         s4Comment.setPrefRowCount(1);
-        s4Comment.setPrefColumnCount(16);
+        s4Comment.setPrefColumnCount(13);
         s4Comment.setWrapText(true);
         TextArea s5Comment = new TextArea();
         s5Comment.setPrefRowCount(1);
-        s5Comment.setPrefColumnCount(16);
+        s5Comment.setPrefColumnCount(13);
         s5Comment.setWrapText(true);
         TextArea s6Comment = new TextArea();
         s6Comment.setPrefRowCount(1);
-        s6Comment.setPrefColumnCount(16);
+        s6Comment.setPrefColumnCount(13);
         s6Comment.setWrapText(true);
         TextArea s7Comment = new TextArea();
         s7Comment.setPrefRowCount(1);
-        s7Comment.setPrefColumnCount(16);
+        s7Comment.setPrefColumnCount(13);
         s7Comment.setWrapText(true);
         TextArea s8Comment = new TextArea();
         s8Comment.setPrefRowCount(1);
-        s8Comment.setPrefColumnCount(16);
+        s8Comment.setPrefColumnCount(13);
         s8Comment.setWrapText(true);
         TextArea wtComment = new TextArea();
         wtComment.setPrefRowCount(1);
-        wtComment.setPrefColumnCount(16);
+        wtComment.setPrefColumnCount(13);
         wtComment.setWrapText(true);
         TextArea s9Comment = new TextArea();
         s9Comment.setPrefRowCount(1);
-        s9Comment.setPrefColumnCount(16);
+        s9Comment.setPrefColumnCount(13);
         s9Comment.setWrapText(true);
         TextArea ftdComment = new TextArea();
         ftdComment.setPrefRowCount(1);
-        ftdComment.setPrefColumnCount(16);
+        ftdComment.setPrefColumnCount(13);
         ftdComment.setWrapText(true);
         TextArea rtdComment = new TextArea();
         rtdComment.setPrefRowCount(1);
-        rtdComment.setPrefColumnCount(16);
+        rtdComment.setPrefColumnCount(13);
         rtdComment.setWrapText(true);
         TextArea tpComment = new TextArea();
         tpComment.setPrefRowCount(1);
-        tpComment.setPrefColumnCount(16);
+        tpComment.setPrefColumnCount(13);
         tpComment.setWrapText(true);
         TextArea flComment = new TextArea();
         flComment.setPrefRowCount(1);
-        flComment.setPrefColumnCount(16);
+        flComment.setPrefColumnCount(13);
         flComment.setWrapText(true);
         TextArea frComment = new TextArea();
         frComment.setPrefRowCount(1);
-        frComment.setPrefColumnCount(16);
+        frComment.setPrefColumnCount(13);
         frComment.setWrapText(true);
         TextArea rlComment = new TextArea();
         rlComment.setPrefRowCount(1);
-        rlComment.setPrefColumnCount(16);
+        rlComment.setPrefColumnCount(13);
         rlComment.setWrapText(true);
         TextArea rrComment = new TextArea();
         rrComment.setPrefRowCount(1);
-        rrComment.setPrefColumnCount(16);
+        rrComment.setPrefColumnCount(13);
         rrComment.setWrapText(true);
         TextArea s10Comment = new TextArea();
         s10Comment.setPrefRowCount(1);
-        s10Comment.setPrefColumnCount(16);
+        s10Comment.setPrefColumnCount(13);
         s10Comment.setWrapText(true);
         TextArea s11Comment = new TextArea();
         s11Comment.setPrefRowCount(1);
-        s11Comment.setPrefColumnCount(16);
+        s11Comment.setPrefColumnCount(13);
         s11Comment.setWrapText(true);
 
 
@@ -373,13 +377,59 @@ public class Main extends Application {
 
         gPane.addRow(9,rrpLabel, rrpVBox, RBrrpArray[0], RBrrpArray[1], RBrrpArray[2], RBrrpArray[3], rrpComment);
 
-        gPane.addRow(10, frdLabel, new Text(), RBfrdArray[0], RBfrdArray[1], RBfrdArray[2], RBfrdArray[3], frdComment);
+        TextField frdLeftTF = new TextField();
+        Label frdLeftLabel = new Label("Left");
+        HBox frdLeftHBox = new HBox(frdLeftTF, frdLeftLabel);
+        frdLeftHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField frdRightTF = new TextField();
+        Label frdRightLabel = new Label("Right");
+        HBox frdRightHBox = new HBox(frdRightTF, frdRightLabel);
+        frdRightHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox frdVBox = new VBox(frdLeftHBox, frdRightHBox);
+        frdVBox.setSpacing(2);
 
-        gPane.addRow(11,rrdLabel, new Text(), RBrrdArray[0], RBrrdArray[1], RBrrdArray[2], RBrrdArray[3], rrdComment);
+        gPane.addRow(10, frdLabel, frdVBox, RBfrdArray[0], RBfrdArray[1], RBfrdArray[2], RBfrdArray[3], frdComment);
 
-        gPane.addRow(12, fbsLabel, new Text(), RBfbsArray[0], RBfbsArray[1], RBfbsArray[2], RBfbsArray[3], fbsComment);
+        TextField rrdLeftTF = new TextField();
+        Label rrdLeftLabel = new Label("Left");
+        HBox rrdLeftHBox = new HBox(rrdLeftTF, rrdLeftLabel);
+        rrdLeftHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField rrdRightTF = new TextField();
+        Label rrdRightLabel = new Label("Right");
+        HBox rrdRightHBox = new HBox(rrdRightTF, rrdRightLabel);
+        rrdRightHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox rrdVBox = new VBox(rrdLeftHBox, rrdRightHBox);
+        rrdVBox.setSpacing(2);
 
-        gPane.addRow(13, rbsLabel, new Text(), RBrbsArray[0], RBrbsArray[1], RBrbsArray[2], RBrbsArray[3], rbsComment);
+        gPane.addRow(11,rrdLabel, rrdVBox, RBrrdArray[0], RBrrdArray[1], RBrrdArray[2], RBrrdArray[3], rrdComment);
+
+        CheckBox fbsCB = new CheckBox("- N/A");
+        TextField fbsLeftTF = new TextField();
+        Label fbsLeftLabel = new Label("Left");
+        HBox fbsLeftHBox = new HBox(fbsLeftTF, fbsLeftLabel);
+        fbsLeftHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField fbsRightTF = new TextField();
+        Label fbsRightLabel = new Label("Right");
+        HBox fbsRightHBox = new HBox(fbsRightTF, fbsRightLabel);
+        fbsRightHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox fbsVBox = new VBox(fbsCB, fbsLeftHBox, fbsRightHBox);
+        fbsVBox.setSpacing(2);
+
+        gPane.addRow(12, fbsLabel, fbsVBox, RBfbsArray[0], RBfbsArray[1], RBfbsArray[2], RBfbsArray[3], fbsComment);
+
+        CheckBox rbsCB = new CheckBox("- N/A");
+        TextField rbsLeftTF = new TextField();
+        Label rbsLeftLabel = new Label("Left");
+        HBox rbsLeftHBox = new HBox(rbsLeftTF, rbsLeftLabel);
+        rbsLeftHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField rbsRightTF = new TextField();
+        Label rbsRightLabel = new Label("Right");
+        HBox rbsRightHBox = new HBox(rbsRightTF, rbsRightLabel);
+        rbsRightHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox rbsVBox = new VBox(rbsCB, rbsLeftHBox, rbsRightHBox);
+        rbsVBox.setSpacing(2);
+
+        gPane.addRow(13, rbsLabel, rbsVBox, RBrbsArray[0], RBrbsArray[1], RBrbsArray[2], RBrbsArray[3], rbsComment);
 
         gPane.addRow(14, s4Label, new Text(), RBs4Array[0], RBs4Array[1], RBs4Array[2], RBs4Array[3], s4Comment);
 
@@ -393,28 +443,100 @@ public class Main extends Application {
 
         gPane.addRow(18, s8Label, new Text(), RBs8Array[0], RBs8Array[1], RBs8Array[2], RBs8Array[3], s8Comment);
 
-        gPane.addRow(19,wtLabel, new Text(), RBwtArray[0], RBwtArray[1], RBwtArray[2], RBwtArray[3], wtComment);
+        CheckBox wtCB = new CheckBox("N/A");
+
+        gPane.addRow(19,wtLabel, wtCB, RBwtArray[0], RBwtArray[1], RBwtArray[2], RBwtArray[3], wtComment);
 
         gPane.add(s9Label, 0 , 20, 2 ,1);
         gPane.addRow(20, RBs9Array[0], RBs9Array[1], RBs9Array[2], RBs9Array[3], s9Comment);
 
-        gPane.addRow(21, ftdLabel, new Text(), RBftdArray[0], RBftdArray[1], RBftdArray[2], RBftdArray[3], ftdComment);
+        TextField ftdLeftTF = new TextField();
+        Label ftdLeftLabel = new Label("/32nds Left");
+        HBox ftdLeftHBox = new HBox(ftdLeftTF, ftdLeftLabel);
+        ftdLeftHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField ftdRightTF = new TextField();
+        Label ftdRightLabel = new Label("/32nds Right");
+        HBox ftdRightHBox = new HBox(ftdRightTF, ftdRightLabel);
+        ftdRightHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox ftdVBox = new VBox(ftdLeftHBox, ftdRightHBox);
+        ftdVBox.setSpacing(2);
 
-        gPane.addRow(22, rtdLabel, new Text(), RBrtdArray[0], RBrtdArray[1], RBrtdArray[2], RBrtdArray[3], rtdComment);
+        gPane.addRow(21, ftdLabel, ftdVBox, RBftdArray[0], RBftdArray[1], RBftdArray[2], RBftdArray[3], ftdComment);
+
+        TextField rtdLeftTF = new TextField();
+        Label rtdLeftLabel = new Label("/32nds Left");
+        HBox rtdLeftHBox = new HBox(rtdLeftTF, rtdLeftLabel);
+        rtdLeftHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField rtdRightTF = new TextField();
+        Label rtdRightLabel = new Label("/32nds Right");
+        HBox rtdRightHBox = new HBox(rtdRightTF, rtdRightLabel);
+        rtdRightHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox rtdVBox = new VBox(rtdLeftHBox, rtdRightHBox);
+        rtdVBox.setSpacing(2);
+
+        gPane.addRow(22, rtdLabel, rtdVBox, RBrtdArray[0], RBrtdArray[1], RBrtdArray[2], RBrtdArray[3], rtdComment);
 
         gPane.add(tpLabel, 0 ,23, 2, 1);
         gPane.add(tpComment, 6, 23, 1, 1);
 
-        gPane.addRow(24, flLabel, new Text());
+        CheckBox flCB = new CheckBox("- N/A");
+        TextField flAfterTF = new TextField();
+        Label flAfterLabel = new Label("After");
+        HBox flAfterHBox = new HBox(flAfterTF, flAfterLabel);
+        flAfterHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField flBeforeTF = new TextField();
+        Label flBeforeLabel = new Label("Before");
+        HBox flBeforeHBox = new HBox(flBeforeTF, flBeforeLabel);
+        flBeforeHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox flVBox = new VBox(flCB, flAfterHBox, flBeforeHBox);
+        flVBox.setSpacing(2);
+
+        gPane.addRow(24, flLabel, flVBox);
         gPane.add(flComment, 6, 24, 1,1);
 
-        gPane.addRow(25, frLabel, new Text());
+        CheckBox frCB = new CheckBox("- N/A");
+        TextField frAfterTF = new TextField();
+        Label frAfterLabel = new Label("After");
+        HBox frAfterHBox = new HBox(frAfterTF, frAfterLabel);
+        frAfterHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField frBeforeTF = new TextField();
+        Label frBeforeLabel = new Label("Before");
+        HBox frBeforeHBox = new HBox(frBeforeTF, frBeforeLabel);
+        frBeforeHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox frVBox = new VBox(frCB, frAfterHBox, frBeforeHBox);
+        frVBox.setSpacing(2);
+
+        gPane.addRow(25, frLabel, frVBox);
         gPane.add(frComment, 6, 25, 1,1);
 
-        gPane.addRow(26, rlLabel, new Text());
+        CheckBox rlCB = new CheckBox("- N/A");
+        TextField rlAfterTF = new TextField();
+        Label rlAfterLabel = new Label("After");
+        HBox rlAfterHBox = new HBox(rlAfterTF, rlAfterLabel);
+        rlAfterHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField rlBeforeTF = new TextField();
+        Label rlBeforeLabel = new Label("Before");
+        HBox rlBeforeHBox = new HBox(rlBeforeTF, rlBeforeLabel);
+        rlBeforeHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox rlVBox = new VBox(rlCB, rlAfterHBox, rlBeforeHBox);
+        rlVBox.setSpacing(2);
+
+        gPane.addRow(26, rlLabel, rlVBox);
         gPane.add(rlComment, 6, 26, 1,1);
 
-        gPane.addRow(27, rrLabel, new Text());
+        CheckBox rrCB = new CheckBox("- N/A");
+        TextField rrAfterTF = new TextField();
+        Label rrAfterLabel = new Label("After");
+        HBox rrAfterHBox = new HBox(rrAfterTF, rrAfterLabel);
+        rrAfterHBox.setAlignment(Pos.CENTER_LEFT);
+        TextField rrBeforeTF = new TextField();
+        Label rrBeforeLabel = new Label("Before");
+        HBox rrBeforeHBox = new HBox(rrBeforeTF, rrBeforeLabel);
+        rrBeforeHBox.setAlignment(Pos.CENTER_LEFT);
+        VBox rrVBox = new VBox(rlCB, rrAfterHBox, rrBeforeHBox);
+        rrVBox.setSpacing(2);
+
+        gPane.addRow(27, rrLabel, rrVBox);
         gPane.add(rrComment, 6, 27, 1,1);
 
         gPane.add(s10Label, 0 , 28, 2, 1);
